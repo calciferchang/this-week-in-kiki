@@ -88,7 +88,32 @@
 
       figure {
         display: flex;
-        width: 34rem;
+        gap: 8px;
+        margin-right: calc(50% - 40vw);
+        margin-top: 16px;
+      }
+
+      figure img {
+        flex: 1;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        outline: solid 1px black;
+      }
+
+      .nyt-articles a {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: 45rem) {
+        body {
+          padding: 0 16px;
+        }
+        figure {
+          margin-top: 48px;
+          flex-direction: column;
+        }
       }
     </style>
   </head>
@@ -255,18 +280,23 @@
 
     <p>
       One of my first projects is on exploring relationships between images and
-      text. The structure of the deliverable is simple, three 8.5x11 with a 7x7
-      image and one word in 30pt Helvetica Light. However, the simplicity is my
-      favorite part of the project and I've has a lot of fun exploring the
+      text. The structure of the deliverable is simple, three 8.5x11in with a
+      7x7in image and one word in 30pt Helvetica Light. However, the simplicity
+      is my favorite part of the project and I've has a lot of fun exploring the
       different ways I can manipulate the perception of the text.
     </p>
 
-    <div class="project-images">
-      <figure>
-        <img src="assets/consumption - 1.png" alt="" />
-        <img src="assets/consumption - 2.png" alt="" />
-      </figure>
-    </div>
+    <figure>
+      <img src="assets/consumption - 1.png" alt="" />
+      <img src="assets/consumption - 2.png" alt="" />
+      <img src="assets/consumption - 3.png" alt="" />
+    </figure>
+
+    <figure>
+      <img src="assets/shot - 2.jpg" alt="" />
+      <img src="assets/shot - 3.jpg" alt="" />
+      <img src="assets/shot - 1.jpg" alt="" />
+    </figure>
 
     <h2>something a little more lighthearted</h2>
 
@@ -298,11 +328,11 @@
       </li>
       <li>
         three of my favorite nyt articles from the last year
-        <div>
+        <div class="nyt-articles">
           <a
             href="https://www.nytimes.com/2024/12/06/opinion/united-health-care-ceo-shooting.html"
-            >The Rage and Glee That Followed a C.E.O.'s Killing Should Ring All
-            Alarms</a
+            >Opinion | The Rage and Glee That Followed a C.E.O.'s Killing Should
+            Ring All Alarms</a
           >
           <a
             href="https://www.nytimes.com/2024/09/17/science/nasa-europa-clipper-radiation.html"
