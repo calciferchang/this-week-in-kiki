@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: "ABC Oracle";
+        src:
+          url("./assets/ABCOraclePlusVariableEdu-Regular.woff2") format("woff2"),
+          url("./assets/ABCOraclePlusVariableEdu-Regular.woff") format("woff");
+      }
+      body {
+        font-family: "ABC Oracle", sans-serif;
+        font-weight: 380;
+        line-height: 1.6;
+        color: #333;
+        background: #fff;
+        max-width: 34rem;
+        margin: 0 auto;
+        counter-reset: footnote;
+      }
+
+      h1,
+      h2 {
+        font-variation-settings:
+          "wght" 500,
+          "slnt" 0,
+          "TRIP" 1;
+        margin: 48px 0 0;
+        font-size: 1.1rem;
+      }
+
+      p {
+        margin-top: 14px;
+      }
+
+      h1 + p,
+      h2 + p {
+        margin-top: 8px;
+      }
+
+      a {
+        color: #333;
+        transition: color 0.2s;
+
+        &:hover {
+          color: mediumblue;
+        }
+      }
+      a::after {
+        content: "↗";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+      }
+
+      a:hover::after {
+        color: mediumblue;
+      }
+
+      sup {
+        font-size: 0.8em;
+        vertical-align: super;
+        color: lightslategray;
+        margin: 0 2px;
+      }
+
+      blockquote {
+        padding-left: 16px;
+        color: lightslategray;
+        font-weight: 340;
+      }
+      .footnote {
+        counter-increment: footnote;
+        text-indent: -1.5em;
+        padding-left: 1.5em;
+      }
+      .footnote::before {
+        content: "[" counter(footnote) "]: ";
+      }
+
+      figure {
+        display: flex;
+        gap: 8px;
+        margin-right: calc(50% - 40vw);
+        margin-top: 16px;
+      }
+
+      figure img {
+        flex: 1;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        outline: solid 1px black;
+      }
+
+      .nyt-articles a {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: 45rem) {
+        body {
+          padding: 0 16px;
+        }
+        figure {
+          margin-top: 48px;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>this week in kiki, 05</h1>
+
+    <p>
+      If
+      <a
+        href="https://www.ntu.org/publications/detail/when-is-a-calendar-day-not-a-calendar-day-and-why-does-it-matter"
+        >Congress can say that two years can constitute one calendar day</a
+      >
+      then I can say that last week's newsletter is releasing on a Tuesday. It's
+      been a messy week, but in a way that I'm very thankful for. School just
+      began last week and it's been demanding, even though it was expected.
+    </p>
+
+    <blockquote>
+      In the writing of this sentence, someone just spilled their drink all over
+      their laptop. I feel for them and suppose that as rough as my week has
+      been, it could have been worse.
+    </blockquote>
+
+    <p>
+      A lot of the struggles have been relating to getting stuff done. In the
+      past, I've struggled with motivation but this week its been mostly
+      attention and energy (or at least, moreso than usual<sup>[1]</sup>). I'm
+      not sure if it's a result of the school semester starting and my brain
+      trying to get used to it again or if this is simply another one of life's
+      ebbs and flows. Whichever it is, it's had me thinking more on how i spend
+      my time and energy in the face of the lack of it.
+    </p>
+
+    <blockquote class="footnote" id="fn1">
+      kiki was diagnosed with adhd at age 13 and has been virtually unmedicated
+      since.
+    </blockquote>
+
+    <p>
+      At its worst, my attention feels scattered and dispersed— try as I might,
+      nothing is being processed. I think that I'm realizing that my energy can
+      be compared to a single charge in a battery. Whatever the charge is at
+      when the day begins, that's what I have to work with today and once it's
+      empty, that's all I have until tomorrow. What I've been starting to find
+      some success with is putting the highest effort, highest priority things
+      first<sup>[2]</sup>
+      and checking in with myself throughout the day to make sure I'm not
+      burning myself out.
+    </p>
+
+    <blockquote class="footnote" id="fn2">
+      If it's your job to eat a frog, it's best to do it first thing in the
+      morning. And If it's your job to eat two frogs, it's best to eat the
+      biggest one first.
+      <br />— Mark Twain
+    </blockquote>
+
+    <p>
+      Being aware that I only really have so much energy in the day has made me
+      think more on what I'm prioritizing with what I'm spending my energy on
+      and really making me question what I value in my day-to-day. For example,
+      shitposting on the internet can be amusing but really isn't fulfilling
+      (and at times is detrimental to my social life) but it's really
+      <em>easy</em> to do. This newsletter, on the other hand, is incredibly
+      fulfilling but requires a lot of effort and commitment to even write and
+      curate, let alone things like building a website or styling. This dynamic
+      of things has been on my mind a lot recently, I feel like many things
+      today have become rather shallow: intended to be easily accessible,
+      consumable, and addictive but wholly unfulfilling. Fast food. Social
+      media. Hollywood. Video games. To me, this is the value of curation— when
+      everything in our life is vying for our attention, we gain the power to
+      decide what we choose to do with it.
+    </p>
+
+    <h2>on the mind</h2>
+
+    <p>
+      I've been thinking about Luddism<sup>[3]</sup> with the rise of anti-AI
+      sentiment. It's interesting how the sentiments from from a couple
+      centuries ago with the beginning of industrialization became relevant
+      again 10 years ago with the rise of big tech and are once again resurgent
+      with the growth of AI. In doing research on the topic, I found
+      <a
+        href="https://www.nytimes.com/2013/06/14/opinion/krugman-sympathy-for-the-luddites.html?_r=0"
+        >this article from 2013 that feels once again relevant</a
+      >
+      (<a
+        href="https://web.archive.org/web/20250821025519/https://www.nytimes.com/2013/06/14/opinion/krugman-sympathy-for-the-luddites.html?_r=0"
+        >alt link</a
+      >). The author quotes the woolworkers of the 18th century— "'Who will
+      maintain our families, whilst we undertake the arduous task' of learning a
+      new trade? Also, they asked, what will happen if the new trade, in turn,
+      gets devalued by further technological advance?"
+    </p>
+    <blockquote class="footnote" id="fn3">
+      Luddites were members of a 19th-century movement of English textile
+      workers who opposed the use of certain types of automated machinery due to
+      concerns relating to worker pay and output quality, destroying machines in
+      organised raids as a form of protest.
+    </blockquote>
+    <p>
+      Today, almost 60% of bachelor's degree holders graduate in debt, each
+      owing 30k on average. Housing prices have just about
+      <a href="https://www.longtermtrends.net/home-price-vs-inflation/"
+        >doubled in the past 50 years (accounting for inflation)</a
+      >
+      with houses being
+      <a
+        href="https://www.longtermtrends.net/home-price-median-annual-income-ratio/"
+        >more expensive than ever compared to household income</a
+      >.
+      <a href="https://www.in2013dollars.com/us/inflation/1977"
+        >Cost of living has skyrocketed</a
+      >
+      while
+      <a href="https://www.epi.org/publication/charting-wage-stagnation/"
+        >pay has stagnated</a
+      >. In the current political and economic landscape, it's simply not
+      feasible nor reasonable to ask everyone displaced by structural
+      unemployment to re-educate themselves and as a result the opposition to AI
+      being so staunch is unsurprising: most people <em>cannot afford</em> to
+      fail and to many, it represents another effort by the wealthiest to
+      extract value from the 99%.
+    </p>
+
+    <p>
+      Today, Luddism is remembered as a foolish endeavor to resist progress yet
+      we see their arguments resurfacing in conversations on the legality and
+      ethicality of AI, especially in the context of their relation to corporate
+      cost-cutting. However, as the Luddites' failure has proven to us, progress
+      <em>is</em> inevitable and structural unemployment an unfortunate
+      consequence of it. With this acknowledgment, I agree with Krugman that the
+      only solution is "having a strong social safety net, one that guarantees
+      not just health care but a minimum income, too."
+    </p>
+
+    <p>
+      While this kind of support system is bemoaned by many in my country, I
+      wonder what their substitute would be given how compared to last year
+      <a
+        href="https://web.archive.org/web/20250907232933/https://fiscaldata.treasury.gov/americas-finance-guide/federal-spending/"
+        >our current administration has already spent 7% more than the last
+        one</a
+      >
+      (<a
+        href="https://www.pewresearch.org/short-reads/2013/09/27/chart-of-the-week-the-bipartisan-federal-debt-limit/"
+        >which was already grossly overspending</a
+      >) and is
+      <a href="https://www.crfb.org/blogs/whats-one-big-beautiful-bill-act"
+        >projected to increase the deficit substantially</a
+      >, all while cutting support for the people. (i don't have time to find
+      all the sources for this and they would be almost immediately outdated if
+      i did.)
+    </p>
+
+    <h2>what i'm doing.</h2>
+
+    <p>
+      I just finished my first week of classes, which has substantially
+      increased my mental overhead. (i attribute the delay of this to the
+      increase in work alongside writing taking significantly longer that i
+      anticipated)
+    </p>
+
+    <p>
+      One of my first projects is on exploring relationships between images and
+      text. The structure of the deliverable is simple, three 8.5x11in with a
+      7x7in image and one word in 30pt Helvetica Light. However, the simplicity
+      is my favorite part of the project and I've has a lot of fun exploring the
+      different ways I can manipulate the perception of the text.
+    </p>
+
+    <figure>
+      <img src="assets/consumption - 1.png" alt="" />
+      <img src="assets/consumption - 2.png" alt="" />
+      <img src="assets/consumption - 3.png" alt="" />
+    </figure>
+
+    <figure>
+      <img src="assets/shot - 2.jpg" alt="" />
+      <img src="assets/shot - 3.jpg" alt="" />
+      <img src="assets/shot - 1.jpg" alt="" />
+    </figure>
+
+    <h2>something a little more lighthearted</h2>
+
+    <ul>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Apology_Act,_2009"
+          >in canada, saying "i'm sorry" is not an admission of guilt</a
+        >
+        (i am ignoring how most american states have similar laws)
+      </li>
+      <li>
+        <a href="https://getfullyear.com/"
+          >an amusingly useless api which my friend james showed me and then
+          claimed i would share without crediting him</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://matthewbutterick.com/chron/ai-scraping-and-publicly-available-web-data.html"
+          >an interesting blog post on what constitutes "publicly available
+          information"</a
+        >
+      </li>
+      <li>
+        <a href="https://keymapdb.com/keymaps/casuanoob/"
+          >a lovely keymap for a small form factor board. i hope this baffles
+          someone.</a
+        >
+      </li>
+      <li>
+        three of my favorite nyt articles from the last year
+        <div class="nyt-articles">
+          <a
+            href="https://www.nytimes.com/2024/12/06/opinion/united-health-care-ceo-shooting.html"
+            >Opinion | The Rage and Glee That Followed a C.E.O.'s Killing Should
+            Ring All Alarms</a
+          >
+          <a
+            href="https://www.nytimes.com/2024/09/17/science/nasa-europa-clipper-radiation.html"
+            >NASA's Europa Clipper Mission Looked Doomed. Could Engineers Save
+            It?</a
+          >
+          <a
+            href="https://www.nytimes.com/2025/02/22/realestate/trump-brutalist-architecture.html"
+            >President Trump's Attack on Brutalist Architecture in Washington</a
+          >
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
