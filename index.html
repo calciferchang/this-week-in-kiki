@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>05</title>
+    <title>06</title>
     <style>
       * {
         margin: 0;
@@ -23,8 +23,7 @@
         color: #333;
         background: #fff;
         max-width: 34rem;
-        margin: 0 auto;
-        counter-reset: footnote;
+        margin-left: 24px;
       }
 
       h1,
@@ -54,11 +53,16 @@
           color: mediumblue;
         }
       }
-      a::after {
+      a.external-link::after {
         content: "↗";
         display: inline-block;
         vertical-align: middle;
         margin-left: 4px;
+      }
+
+      a.internal-link {
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
       }
 
       a:hover::after {
@@ -73,17 +77,16 @@
       }
 
       blockquote {
-        padding-left: 16px;
         color: lightslategray;
         font-weight: 340;
+        padding-left: 16px;
+        border-left: dotted 2px lightslategray;
       }
+
       .footnote {
         counter-increment: footnote;
         text-indent: -1.5em;
         padding-left: 1.5em;
-      }
-      .footnote::before {
-        content: "[" counter(footnote) "]: ";
       }
 
       figure {
@@ -101,11 +104,30 @@
         outline: solid 1px black;
       }
 
-      .nyt-articles a {
-        display: block;
-        margin-bottom: 5px;
+      .internal-link video {
+        display: none;
       }
 
+      body > div {
+        margin-bottom: 224px;
+      }
+      ul ul {
+        margin-left: 20px; /* or padding-left: 20px; */
+      }
+
+      /* Or for more specific control: */
+      ul li ul {
+        margin-left: 30px;
+      }
+
+      /* Or target specific nesting levels: */
+      ul ul {
+        margin-left: 20px;
+      }
+
+      ul ul ul {
+        margin-left: 40px; /* deeper nesting */
+      }
       @media (max-width: 45rem) {
         body {
           padding: 0 16px;
@@ -116,6 +138,7 @@
         }
       }
     </style>
+    <script defer src="hoverElement.js"></script>
   </head>
   <body>
     <h1>this week in kiki, 06</h1>
@@ -159,6 +182,9 @@
         semantic searches, but eventually I found it in my Firefox browser
         history (which I probably should’ve looked through first).
       </p>
+      <figure>
+        <img style="max-width: 800px" src="./assets/ericprice_landing.png" />
+      </figure>
       <p>
         It’s nothing insanely revolutionary, just a designer’s portfolio, but I
         found it at a time where I was still really looking for my identity as a
@@ -168,10 +194,30 @@
         with as little fluff as possible.
       </p>
       <p>
-        There’s fun touches: the overlay when you hover a link, the color it
-        changes with some changing to that iconic early-web blue (which
-        according to a friend was chosen arbitrarily based on a favorite color)
-        to white.
+        There’s fun touches:
+        <a class="internal-link"
+          >the overlay when you hover a link
+          <video width="600" autoplay loop muted>
+            <source
+              src="./assets/ericprice_interaction2.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video> </a
+        >,
+        <a class="internal-link">
+          <video width="600" autoplay loop muted>
+            <source
+              src="./assets/ericprice_interaction1.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          the color it changes with some changing to that iconic early-web
+          blue</a
+        >
+        (which according to a friend was chosen arbitrarily based on a favorite
+        color) to white.
       </p>
       <p>
         The designer’s personality comes out in the different kinds of designs
@@ -196,20 +242,24 @@
         eloquent:
       </p>
       <blockquote>
-        What if New Orleans, a predominantly BIPOC city deeply impacted by
-        hurricanes, receding coastlines, histories of violence, and a cyclical
-        commitment to celebration, was considered a harbinger for the world that
-        is to come?
-        <br />This framework postulates New Orleans, along with other more
-        climate-vulnerable regions in the world, as already living in the
-        “future” that other places will experience. With alarming speed, more
-        regions of the world are experiencing the immediate effects of climate
-        change and dramatic shifts in economic and government function. New
-        Orleans is thereby approached as a gift to the rest of the world in its
-        ability to offer lessons and examples for how to live in constant
-        negotiation with the weather, grounded within a community that reflects
-        the global majority, and in direct proximity to the effects and
-        aftereffects of colonial and exploitative economies.
+        <p>
+          What if New Orleans, a predominantly BIPOC city deeply impacted by
+          hurricanes, receding coastlines, histories of violence, and a cyclical
+          commitment to celebration, was considered a harbinger for the world
+          that is to come?
+        </p>
+        <p>
+          This framework postulates New Orleans, along with other more
+          climate-vulnerable regions in the world, as already living in the
+          “future” that other places will experience. With alarming speed, more
+          regions of the world are experiencing the immediate effects of climate
+          change and dramatic shifts in economic and government function. New
+          Orleans is thereby approached as a gift to the rest of the world in
+          its ability to offer lessons and examples for how to live in constant
+          negotiation with the weather, grounded within a community that
+          reflects the global majority, and in direct proximity to the effects
+          and aftereffects of colonial and exploitative economies.
+        </p>
       </blockquote>
       <p>
         The design of the page itself feels very raw with its vibrant colors,
@@ -226,6 +276,7 @@
         before).
       </p>
     </div>
+
     <div>
       <p>
         In a much more personal way, the designer also introduced me to one of
@@ -281,6 +332,7 @@
         go back and correct it).
       </p>
     </div>
+
     <div>
       <p>
         I’ve been growing more and more concerned about the political climate in
@@ -291,6 +343,7 @@
         everyone else suffer than improve their own lives.
       </p>
     </div>
+
     <div>
       <p>
         I’ve been thinking a lot about what defines my personal aesthetic
@@ -309,6 +362,62 @@
         layer, tucking a shirt a certain way, or choosing an aesthetic that may
         not be expected for a situation.
       </p>
+    </div>
+    <div>
+      <ul>
+        <li>
+          undercooked ideas
+          <ul>
+            <li>
+              <a class="external-link" href="intentionalfriction.html">
+                "intentional friction and the importance of curation"
+              </a>
+              <br />
+              (836 words)
+            </li>
+            <li>
+              <a href="beingbored.html" class="external-link">"being bored"</a>
+              <br />
+              (181 words) thoughts on how being bored is actually a good thing
+              and how maybe we should do it more.
+            </li>
+          </ul>
+        </li>
+        <li>
+          related ideas that are even less cooked
+          <ul>
+            <li>
+              <a href="stickingstock.html" class="external-link"
+                >sticking stock</a
+              >
+              <br />
+              this is the automatic transcription of a 13 minute audio clip. its
+              kind of long.
+            </li>
+            <li>
+              <strong
+                >the importance of attribution in the current digital
+                landscape</strong
+              >
+              <br />
+              i really dislike pinterest because i feel like its really
+              associated with… empty aesthetic. what bothers me is 1. the
+              algorithm that just shits out things that are "associated with
+              each other" visually regardless of their sources, and 2. sources
+              are few and far between, it's nearly impossible to find the true
+              source of something on pinterest. because of the algorithm,
+              there's so many ads.
+            </li>
+            <li>
+              <strong>anything that can be automated, should be</strong> <br />
+              Disclaimer: This is not a “replace humans with AI” opinion, it is
+              that things that are considered menial and unfulfilling should be
+              replaced if possible. I don’t think anyone regrets the invention
+              of the dishwasher, for example.
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
