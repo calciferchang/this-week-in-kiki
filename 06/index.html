@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: "ABC Oracle";
+        src:
+          url("./assets/ABCOraclePlusVariableEdu-Regular.woff2") format("woff2"),
+          url("./assets/ABCOraclePlusVariableEdu-Regular.woff") format("woff");
+      }
+      body {
+        font-family: "ABC Oracle", sans-serif;
+        font-weight: 380;
+        line-height: 1.6;
+        color: #333;
+        background: #fff;
+        max-width: 34rem;
+        margin-left: 24px;
+      }
+
+      h1,
+      h2 {
+        font-variation-settings:
+          "wght" 500,
+          "slnt" 0,
+          "TRIP" 1;
+        margin: 48px 0 0;
+        font-size: 1.1rem;
+      }
+
+      p {
+        margin-top: 14px;
+      }
+
+      h1 + p,
+      h2 + p {
+        margin-top: 8px;
+      }
+
+      a {
+        color: #333;
+        transition: color 0.2s;
+
+        &:hover {
+          color: mediumblue;
+        }
+      }
+      a.external-link::after {
+        content: "↗";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+      }
+
+      a.internal-link {
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+      }
+
+      a:hover::after {
+        color: mediumblue;
+      }
+
+      sup {
+        font-size: 0.8em;
+        vertical-align: super;
+        color: lightslategray;
+        margin: 0 2px;
+      }
+
+      blockquote {
+        color: lightslategray;
+        font-weight: 340;
+        padding-left: 16px;
+        border-left: dotted 2px lightslategray;
+      }
+
+      .footnote {
+        counter-increment: footnote;
+        text-indent: -1.5em;
+        padding-left: 1.5em;
+      }
+
+      figure {
+        display: flex;
+        gap: 8px;
+        margin-right: calc(50% - 40vw);
+        margin-top: 16px;
+      }
+
+      figure img {
+        flex: 1;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        outline: solid 1px black;
+      }
+
+      .internal-link video {
+        display: none;
+      }
+
+      body > div {
+        margin-bottom: 224px;
+      }
+      ul ul {
+        margin-left: 20px; /* or padding-left: 20px; */
+      }
+
+      /* Or for more specific control: */
+      ul li ul {
+        margin-left: 30px;
+      }
+
+      /* Or target specific nesting levels: */
+      ul ul {
+        margin-left: 20px;
+      }
+
+      ul ul ul {
+        margin-left: 40px; /* deeper nesting */
+      }
+      @media (max-width: 45rem) {
+        body {
+          padding: 0 16px;
+        }
+        figure {
+          margin-top: 48px;
+          flex-direction: column;
+        }
+      }
+    </style>
+    <script defer src="hoverElement.js"></script>
+  </head>
+  <body>
+    <h1>this week in kiki, 06</h1>
+    <div>
+      <p>
+        That feeling of lacking vocabulary has occurred again recently when
+        exploring the idea of how our digital selves differ from our “true
+        selves”. I had a lot of things that I was trying to balance in my head:
+        how we view ourselves, how others view us, how we want to view
+        ourselves… and then I found that this is well-trodden ground and there
+        are terms for these things. I definitely feel a little silly when I go
+        “oh!” finding these things but it’s kind of validating that I am
+        thinking these things and that there is already a lot of thought on
+        these spaces. There’s also something incredibly validating about
+        thinking about something, searching for it, and then finding it.
+      </p>
+
+      <p>
+        I started reading “The Poetics of Space” and found that a lot of the
+        topics there were a little out of my depth. It’s quite interesting, the
+        concept. Basically, the author (so far, I’ve barely made a dent in this
+        not-even-thick book) is making the argument that objects have “renetir”
+        or resonance, an auditory metaphor for how the existence of something
+        has an affect on the area around it and how we perceive these things.
+      </p>
+      <p>
+        As a result, I’ve been diving deeper into things like cognitive
+        psychology, sense of self, identity, personhood, so on and so forth.
+        Personal identity has been a fixation of mine for quite a while— I
+        remember being young and thinking about it, thinking about branding when
+        helping my mother run her business but lacking the vocabulary to talk
+        deeper about it.
+      </p>
+    </div>
+
+    <div>
+      <p>
+        This week, I remembered a site that I had accessed around a year ago but
+        couldn’t remember what it was for the life of me. It absolutely derailed
+        everything I was doing as I was looking through website backlinks,
+        semantic searches, but eventually I found it in my Firefox browser
+        history (which I probably should’ve looked through first).
+      </p>
+      <figure>
+        <img style="max-width: 800px" src="./assets/ericprice_landing.png" />
+      </figure>
+      <p>
+        It’s nothing insanely revolutionary, just a designer’s portfolio, but I
+        found it at a time where I was still really looking for my identity as a
+        designer. There’s something about this that feels rather humble but
+        proud. It feels like there isn’t much ego, as though the layout itself
+        is saying “here’s what I do, here’s the things I want to show the most”
+        with as little fluff as possible.
+      </p>
+      <p>
+        There’s fun touches:
+        <a class="internal-link"
+          >the overlay when you hover a link
+          <video width="600" autoplay loop muted>
+            <source
+              src="./assets/ericprice_interaction2.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video> </a
+        >,
+        <a class="internal-link">
+          <video width="600" autoplay loop muted>
+            <source
+              src="./assets/ericprice_interaction1.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          the color it changes with some changing to that iconic early-web
+          blue</a
+        >
+        (which according to a friend was chosen arbitrarily based on a favorite
+        color) to white.
+      </p>
+      <p>
+        The designer’s personality comes out in the different kinds of designs
+        they make, from more brutalist to more experimental type that maybe not
+        reflect their taste but their attention to detail to ensure that the
+        output represents the subject. It is this portfolio that made me think
+        “I would really love to do work for a museum one day.”
+      </p>
+    </div>
+    <div>
+      <p>
+        The work that truly caught my eye was for the Prospect New Orleans art
+        triennial titled “The Future Is Present, the Harbinger Is Home”. While
+        poetic in nature, its meaning is quite sober: “what we think of as the
+        future is happening in the present, the harbinger (first signs) are home
+        (in this case, Louisiana).” In other words, climate change is happening
+        now, our homes are the harbinger for the world.
+      </p>
+      <p>
+        The about page of
+        <a href="https://prospect6.org/about/">prospect6.org</a> is much more
+        eloquent:
+      </p>
+      <blockquote>
+        <p>
+          What if New Orleans, a predominantly BIPOC city deeply impacted by
+          hurricanes, receding coastlines, histories of violence, and a cyclical
+          commitment to celebration, was considered a harbinger for the world
+          that is to come?
+        </p>
+        <p>
+          This framework postulates New Orleans, along with other more
+          climate-vulnerable regions in the world, as already living in the
+          “future” that other places will experience. With alarming speed, more
+          regions of the world are experiencing the immediate effects of climate
+          change and dramatic shifts in economic and government function. New
+          Orleans is thereby approached as a gift to the rest of the world in
+          its ability to offer lessons and examples for how to live in constant
+          negotiation with the weather, grounded within a community that
+          reflects the global majority, and in direct proximity to the effects
+          and aftereffects of colonial and exploitative economies.
+        </p>
+      </blockquote>
+      <p>
+        The design of the page itself feels very raw with its vibrant colors,
+        tightly spaced headings, and abundant layering of imagery. Ghosts of the
+        designer’s own taste bleed into this campaign but in a way that still
+        gives Prospect-6 an identity separate from its creator (at least, one
+        of— the rest of the designer’s team is credited on their website).
+      </p>
+      <p>
+        Even though I don’t know this person nor anything about them, this work
+        gives the feeling as though they enjoyed making it. (also, I appreciate
+        how they used a rebus in a modern way that still respects the original
+        intent behind its purpose, something I’ve griped about the style
+        before).
+      </p>
+    </div>
+
+    <div>
+      <p>
+        In a much more personal way, the designer also introduced me to one of
+        my now favorite typefaces:
+        <a href="https://abcdinamo.com/typefaces/oracle">Oracle Triple</a>. It
+        was designed by ABC Dinamo whom I had the absolute pleasure to go see
+        talk at Typographics 2025 (This is no formality, I was really excited
+        for their talk which was both informative and funny, you can
+        watch here).
+      </p>
+      <p>
+        There’s something absolutely a little weird and funky about it but it
+        has personality, something that resonates with my “ah, fuck it I’m doing
+        my thing” mindset.
+      </p>
+      <div>
+        <p>Some of my other current favorite faces:</p>
+        <ul>
+          <li>
+            <a
+              class="external-link"
+              href="https://abcdinamo.com/typefaces/diatype"
+              >ABC Diatype</a
+            >
+          </li>
+          <li>
+            <a class="external-link" href="https://abcdinamo.com/typefaces/otto"
+              >ABC Otto</a
+            >
+          </li>
+          <li>
+            <a
+              class="external-link"
+              href="https://www.fairetype.com/fonts/octave"
+              >FaireType Octave</a
+            >
+            (i'm a bit of a sucker for display ligatures)
+          </li>
+          <li>
+            <a
+              class="external-link"
+              href="https://pangrampangram.com/products/editorial-old"
+              >PangramPangram Editorial Old</a
+            >
+          </li>
+        </ul>
+      </div>
+      <p>
+        I’m very much a fan of neo-grotesque sans-serifs and old-style serifs,
+        two things that incredibly different from each other in both appearance
+        and history (actually, not sure about this one, I’d need to research it
+        to say it with certainty but I’ve already written it so I’m not going to
+        go back and correct it).
+      </p>
+    </div>
+
+    <div>
+      <p>
+        I’ve been growing more and more concerned about the political climate in
+        the US. People have been struggling more and more as prices increase
+        while wages stagnate and instead of rallying together to improve
+        conditions, the country has never been more divided against one another.
+        It almost seems as though people in this country would rather see
+        everyone else suffer than improve their own lives.
+      </p>
+    </div>
+
+    <div>
+      <p>
+        I’ve been thinking a lot about what defines my personal aesthetic
+        recently. I'm fascinated by branding because it's fundamentally about
+        how our identity—who we are and who we aspire to be—shapes how we
+        present ourselves. At the moment, I feel like my ability to recognize
+        those things is rather limited which is something I’m trying to work on.
+      </p>
+      <p>
+        Right now, I feel like my personal sense of fashion is inspired by a mix
+        of Steve Jobs & Virgil Ablloh. Jobs in the sense I try to minimize the
+        amount of decisions I need to make and reducing friction in my life—
+        digitally, optimizing workflows and creating macros; physically, keeping
+        my wardrobe simple. Abloh in the sense of adopting his “3% rule”, taking
+        that basic and changing by 3% at most. In outfits, it’s adding one
+        layer, tucking a shirt a certain way, or choosing an aesthetic that may
+        not be expected for a situation.
+      </p>
+    </div>
+    <div>
+      <ul>
+        <li>
+          undercooked ideas
+          <ul>
+            <li>
+              <a class="external-link" href="intentionalfriction.html">
+                "intentional friction and the importance of curation"
+              </a>
+              <br />
+              (836 words)
+            </li>
+            <li>
+              <a href="beingbored.html" class="external-link">"being bored"</a>
+              <br />
+              (181 words) thoughts on how being bored is actually a good thing
+              and how maybe we should do it more.
+            </li>
+          </ul>
+        </li>
+        <li>
+          related ideas that are even less cooked
+          <ul>
+            <li>
+              <a href="stickingstock.html" class="external-link"
+                >sticking stock</a
+              >
+              <br />
+              this is the automatic transcription of a 13 minute audio clip. its
+              kind of long.
+            </li>
+            <li>
+              <strong
+                >the importance of attribution in the current digital
+                landscape</strong
+              >
+              <br />
+              i really dislike pinterest because i feel like its really
+              associated with… empty aesthetic. what bothers me is 1. the
+              algorithm that just shits out things that are "associated with
+              each other" visually regardless of their sources, and 2. sources
+              are few and far between, it's nearly impossible to find the true
+              source of something on pinterest. because of the algorithm,
+              there's so many ads.
+            </li>
+            <li>
+              <strong>anything that can be automated, should be</strong> <br />
+              Disclaimer: This is not a “replace humans with AI” opinion, it is
+              that things that are considered menial and unfulfilling should be
+              replaced if possible. I don’t think anyone regrets the invention
+              of the dishwasher, for example.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
